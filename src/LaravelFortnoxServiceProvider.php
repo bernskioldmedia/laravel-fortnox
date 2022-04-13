@@ -2,9 +2,9 @@
 
 namespace BernskioldMedia\LaravelFortnox;
 
+use BernskioldMedia\LaravelFortnox\Commands\LaravelFortnoxCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use BernskioldMedia\LaravelFortnox\Commands\LaravelFortnoxCommand;
 
 class LaravelFortnoxServiceProvider extends PackageServiceProvider
 {

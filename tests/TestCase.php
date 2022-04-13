@@ -2,9 +2,9 @@
 
 namespace BernskioldMedia\LaravelFortnox\Tests;
 
+use BernskioldMedia\LaravelFortnox\LaravelFortnoxServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use BernskioldMedia\LaravelFortnox\LaravelFortnoxServiceProvider;
 
 class TestCase extends Orchestra
 {

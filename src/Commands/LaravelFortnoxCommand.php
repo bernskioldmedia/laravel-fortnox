@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace BernskioldMedia\LaravelFortnox\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelFortnoxCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-fortnox';
 
     public $description = 'My command';
 

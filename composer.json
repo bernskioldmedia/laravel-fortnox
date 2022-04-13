@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "bernskioldmedia/laravel-fortnox",
+    "description": "A Laravel package to consume the Fortnox API.",
     "keywords": [
-        ":vendor_name",
+        "bernskioldmedia",
         "laravel",
-        ":package_slug"
+        "laravel-fortnox"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/bernskioldmedia/laravel-fortnox",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Bernskiold Media",
+            "email": "hello@bernskioldmedia.com",
             "role": "Developer"
         }
     ],
@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "BernskioldMedia\\LaravelFortnox\\": "src",
+            "BernskioldMedia\\LaravelFortnox\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "BernskioldMedia\\LaravelFortnox\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,10 +54,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "BernskioldMedia\\LaravelFortnox\\LaravelFortnoxServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "LaravelFortnox": "BernskioldMedia\\LaravelFortnox\\Facades\\LaravelFortnox"
             }
         }
     },

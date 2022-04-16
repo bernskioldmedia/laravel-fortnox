@@ -18,6 +18,6 @@ class FinancialYear extends BaseResource
 
     protected function getEndpoint(): string
     {
-        return 'contracts';
+        return 'financialyears';
     }
 }

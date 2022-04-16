@@ -6,6 +6,7 @@ use BernskioldMedia\Fortnox\Resources\AbsenceTransaction;
 use BernskioldMedia\Fortnox\Resources\Account;
 use BernskioldMedia\Fortnox\Resources\AccountChart;
 use BernskioldMedia\Fortnox\Resources\Contract;
+use BernskioldMedia\Fortnox\Resources\Customer;
 use BernskioldMedia\Fortnox\Resources\FinancialYear;
 use BernskioldMedia\Fortnox\Resources\Invoice;
 use BernskioldMedia\Fortnox\Resources\Sie;
@@ -38,6 +39,11 @@ class Fortnox
     public function contracts(): Contract
     {
         return new Contract($this->client);
+    }
+
+    public function customers(): Customer
+    {
+        return new Customer($this->client);
     }
 
     public function financialYears(): FinancialYear

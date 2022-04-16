@@ -2,11 +2,15 @@
 
 namespace BernskioldMedia\Fortnox\Contracts\Resources\Crud;
 
+use BernskioldMedia\Fortnox\Responses\ListResponse;
+
 trait Readable
 {
-    public function all(): object
+    public function all(): ListResponse
     {
-        return $this->client->get($this->getEndpoint(), $this->query);
+        $raw = $this->client->get($this->getEndpoint(), $this->query);
+
+        return new ListResponse($raw, $this->getPluralKey());
     }
 
     public function get(string|int $id): object

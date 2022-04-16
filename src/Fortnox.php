@@ -9,6 +9,7 @@ use BernskioldMedia\Fortnox\Resources\Contract;
 use BernskioldMedia\Fortnox\Resources\FinancialYear;
 use BernskioldMedia\Fortnox\Resources\Invoice;
 use BernskioldMedia\Fortnox\Resources\Sie;
+use BernskioldMedia\Fortnox\Resources\SupplierInvoice;
 
 class Fortnox
 {
@@ -51,6 +52,11 @@ class Fortnox
     public function sie(): Sie
     {
         return new Sie($this->client);
+    }
+
+    public function supplierInvoices(): SupplierInvoice
+    {
+        return new SupplierInvoice($this->client);
     }
 
 }

@@ -88,6 +88,6 @@ class SupplierInvoice extends BaseResource
 
     protected function getEndpoint(): string
     {
-        return 'invoices';
+        return 'supplierinvoices';
     }
 }

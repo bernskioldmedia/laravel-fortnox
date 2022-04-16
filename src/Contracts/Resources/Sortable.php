@@ -1,6 +1,6 @@
 <?php
 
-namespace BernskioldMedia\Fortnox\Contracts\Resources\Filters;
+namespace BernskioldMedia\Fortnox\Contracts\Resources;
 
 trait Sortable
 {

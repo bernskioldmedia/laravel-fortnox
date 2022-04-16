@@ -14,10 +14,10 @@ class FortnoxClient
         private string $accessToken,
         private string $baseUrl
     ) {
-        $this->request = Http::withToken($this->accessToken)
-            ->acceptJson()
+        $this->request = Http::acceptJson()
             ->asJson()
             ->withHeaders([
+                'Access-Token' => $this->accessToken,
                 'Client-Secret' => $this->clientSecret,
             ])
             ->baseUrl($this->baseUrl);
@@ -34,6 +34,14 @@ class FortnoxClient
             ->get($endpoint, $query)
             ->throw()
             ->object();
+    }
+
+    public function contents(string $endpoint, array $query = []): string
+    {
+        return $this->request
+            ->get($endpoint, $query)
+            ->throw()
+            ->body();
     }
 
     public function post(string $endpoint, array $data = []): object

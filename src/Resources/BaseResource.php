@@ -6,7 +6,7 @@ use BernskioldMedia\Fortnox\Contracts\Resources\Filters\FiltersFinancialYear;
 use BernskioldMedia\Fortnox\Contracts\Resources\Filters\FiltersLastModified;
 use BernskioldMedia\Fortnox\Contracts\Resources\Filters\HasPagination;
 use BernskioldMedia\Fortnox\Contracts\Resources\Filters\Searchable;
-use BernskioldMedia\Fortnox\Contracts\Resources\Filters\Sortable;
+use BernskioldMedia\Fortnox\Contracts\Resources\Sortable;
 use BernskioldMedia\Fortnox\FortnoxClient;
 
 abstract class BaseResource

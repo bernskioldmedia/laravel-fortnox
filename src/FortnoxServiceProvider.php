@@ -2,7 +2,6 @@
 
 namespace BernskioldMedia\Fortnox;
 
-use BernskioldMedia\Fortnox\Commands\LaravelFortnoxCommand;
 use BernskioldMedia\Fortnox\Exceptions\InvalidConfiguration;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -13,8 +12,7 @@ class FortnoxServiceProvider extends PackageServiceProvider
     {
         $package
             ->name('laravel-fortnox')
-            ->hasConfigFile()
-            ->hasCommand(LaravelFortnoxCommand::class);
+            ->hasConfigFile();
     }
 
     public function registeringPackage()
@@ -29,6 +27,8 @@ class FortnoxServiceProvider extends PackageServiceProvider
 
             return new Fortnox($client);
         });
+
+        $this->app->alias(Fortnox::class, 'laravel-fortnox');
     }
 
     protected function protectAgainstInvalidConfiguration(array $config): void

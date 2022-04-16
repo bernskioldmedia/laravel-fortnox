@@ -8,6 +8,8 @@ use BernskioldMedia\Fortnox\Contracts\Resources\Filters\HasPagination;
 use BernskioldMedia\Fortnox\Contracts\Resources\Filters\Searchable;
 use BernskioldMedia\Fortnox\Contracts\Resources\Sortable;
 use BernskioldMedia\Fortnox\FortnoxClient;
+use Illuminate\Support\Str;
+use ReflectionClass;
 
 abstract class BaseResource
 {
@@ -26,4 +28,14 @@ abstract class BaseResource
     }
 
     abstract protected function getEndpoint(): string;
+
+    protected function getSingularKey(): string
+    {
+        return Str::studly((new ReflectionClass($this))->getShortName());
+    }
+
+    protected function getPluralKey(): string
+    {
+        return Str::pluralStudly($this->getSingularKey());
+    }
 }

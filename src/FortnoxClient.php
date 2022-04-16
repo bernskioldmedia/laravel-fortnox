@@ -1,0 +1,62 @@
+<?php
+
+namespace BernskioldMedia\Fortnox;
+
+use Illuminate\Http\Client\PendingRequest;
+use Illuminate\Support\Facades\Http;
+
+class FortnoxClient
+{
+    public PendingRequest $request;
+
+    public function __construct(
+        private string $clientSecret,
+        private string $accessToken,
+        private string $baseUrl
+    ) {
+        $this->request = Http::withToken($this->accessToken)
+            ->acceptJson()
+            ->asJson()
+            ->withHeaders([
+                'Client-Secret' => $this->clientSecret,
+            ])
+            ->baseUrl($this->baseUrl);
+    }
+
+    public static function fromConfig(array $config): static
+    {
+        return new static($config['client_secret'], $config['access_token'], $config['base_url']);
+    }
+
+    public function get(string $endpoint, array $query = []): object
+    {
+        return $this->request
+            ->get($endpoint, $query)
+            ->throw()
+            ->object();
+    }
+
+    public function post(string $endpoint, array $data = []): object
+    {
+        return $this->request
+            ->post($endpoint, $data)
+            ->throw()
+            ->object();
+    }
+
+    public function put(string $endpoint, array $data = []): object
+    {
+        return $this->request
+            ->put($endpoint, $data)
+            ->throw()
+            ->object();
+    }
+
+    public function delete(string $endpoint, array $data = []): bool
+    {
+        return $this->request
+            ->delete($endpoint, $data)
+            ->throw()
+            ->ok();
+    }
+}

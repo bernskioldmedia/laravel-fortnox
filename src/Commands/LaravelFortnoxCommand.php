@@ -1,6 +1,6 @@
 <?php
 
-namespace BernskioldMedia\LaravelFortnox\Commands;
+namespace BernskioldMedia\Fortnox\Commands;
 
 use Illuminate\Console\Command;
 

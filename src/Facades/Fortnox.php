@@ -1,13 +1,13 @@
 <?php
 
-namespace BernskioldMedia\LaravelFortnox\Facades;
+namespace BernskioldMedia\Fortnox\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \BernskioldMedia\LaravelFortnox\LaravelFortnox
+ * @see \BernskioldMedia\Fortnox\Fortnox
  */
-class LaravelFortnox extends Facade
+class Fortnox extends Facade
 {
     protected static function getFacadeAccessor()
     {

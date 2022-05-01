@@ -34,7 +34,7 @@ class Contract extends BaseResource
 
     public function createInvoice(int $contractId): object
     {
-        return $this->client->put($this->getEndpoint()."/$contractId/createinvoice")->{"Invoice"};
+        return $this->client->put($this->getEndpoint()."/$contractId/createinvoice")->{$this->getSingularKey()};
     }
 
     public function increaseInvoiceCount(int $contractId): object

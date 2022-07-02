@@ -9,7 +9,9 @@ use BernskioldMedia\Fortnox\Resources\Contract;
 use BernskioldMedia\Fortnox\Resources\Customer;
 use BernskioldMedia\Fortnox\Resources\FinancialYear;
 use BernskioldMedia\Fortnox\Resources\Invoice;
+use BernskioldMedia\Fortnox\Resources\Project;
 use BernskioldMedia\Fortnox\Resources\Sie;
+use BernskioldMedia\Fortnox\Resources\Supplier;
 use BernskioldMedia\Fortnox\Resources\SupplierInvoice;
 use BernskioldMedia\Fortnox\Resources\SupplierInvoicePayment;
 use Illuminate\Support\Facades\Facade;
@@ -22,7 +24,9 @@ use Illuminate\Support\Facades\Facade;
  * @method static Customer customers()
  * @method static FinancialYear financialYears()
  * @method static Invoice invoices()
+ * @method static Project project()
  * @method static Sie sie()
+ * @method static Supplier supplier()
  * @method static SupplierInvoice supplierInvoices()
  * @method static SupplierInvoicePayment supplierInvoicePayments()
  *

@@ -9,7 +9,9 @@ use BernskioldMedia\Fortnox\Resources\Contract;
 use BernskioldMedia\Fortnox\Resources\Customer;
 use BernskioldMedia\Fortnox\Resources\FinancialYear;
 use BernskioldMedia\Fortnox\Resources\Invoice;
+use BernskioldMedia\Fortnox\Resources\Project;
 use BernskioldMedia\Fortnox\Resources\Sie;
+use BernskioldMedia\Fortnox\Resources\Supplier;
 use BernskioldMedia\Fortnox\Resources\SupplierInvoice;
 use BernskioldMedia\Fortnox\Resources\SupplierInvoicePayment;
 
@@ -56,9 +58,19 @@ class Fortnox
         return new Invoice($this->client);
     }
 
+    public function project(): Project
+    {
+        return new Project($this->client);
+    }
+
     public function sie(): Sie
     {
         return new Sie($this->client);
+    }
+
+    public function suppliers(): Supplier
+    {
+        return new Supplier($this->client);
     }
 
     public function supplierInvoices(): SupplierInvoice
